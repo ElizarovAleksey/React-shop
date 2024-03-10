@@ -1,0 +1,36 @@
+.Product {
+    width: 250px;
+    height: 400px;
+    box-shadow: 0px 0px 3px 3px rgb(117, 116, 115);
+    margin: 5px;
+    padding: 25px;
+    border-radius: 5px;
+
+}
+
+.Product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.Product h1 {
+    width: 200px;
+    height: 50px;
+}
+.Product p {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+}
+.Product button {
+    width: 200px;
+    height: 50px;
+    background-color: beige;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Product button:hover {
+    background-color: blanchedalmond;
+}
