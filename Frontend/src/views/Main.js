@@ -1,32 +1,52 @@
-import React, {useState, useEffect}  from 'react';
+// Main.js
+import React, { useState, useEffect, useContext } from 'react';
 import './Main.css';
 import Product from '../components/Product';
-import image from '../images/product.png'
+import { CartContext } from '../components/CartContext';
 
 function Main() {
+  const [products, setProducts] = useState([]);
+  const { addToCart } = useContext(CartContext); // Получаем функцию addToCart из контекста корзины
 
-  const [products, setProducts] = useState([]) 
   useEffect(() => {
-    const api = 'http://localhost:9001/products'
-    fetch(api) 
-    .then(result => result.json())
-    .then((result) => {
-        console.log(result)
-        setProducts(result.data)
-    })
-  }, []) 
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:9001/products');
+        if (!response.ok) {
+          throw new Error('Failed to fetch products');
+        }
+        const data = await response.json();
+        console.log('Received products:', data);
+        setProducts(data.data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  const getImageUrl = (imageUrl) => {
+    return imageUrl ? `http://localhost:9001${imageUrl}` : null;
+  };
 
   return (
     <div className="Main">
-      {Array.isArray(products) ? 
-  products.map((item) => <Product key={item.id} header={item.header} image={item.image} price={item.price}/>
-  ) 
-  : 
-  <p>Данные о продуктах недоступны.</p>
-}
+      {products.length > 0 ? (
+        products.map((product) => (
+          <Product
+            key={product.id}
+            nameProduct={product.nameProduct}
+            imageUrl={getImageUrl(product.imageUrl)}
+            price={product.price}
+            onAddToCart={addToCart} // Передаем функцию добавления в корзину
+          />
+        ))
+      ) : (
+        <p>Данные о продуктах недоступны.</p>
+      )}
     </div>
   );
-
 }
 
 export default Main;

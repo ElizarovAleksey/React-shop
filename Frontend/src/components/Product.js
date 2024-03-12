@@ -1,14 +1,14 @@
+// Product.js
 import React from 'react';
 import './Product.css';
 
-function Product({header, image, price}) {
+function Product({ nameProduct, imageUrl, price, onAddToCart }) {
   return (
     <div className="Product">
-      <img src={image} />
-      <h1>{header}</h1>
+      <img src={imageUrl} alt={nameProduct} />
+      <h1>{nameProduct}</h1>
       <p>{`${price} руб`}</p>
-      <button> в корзину</button>
-
+      <button onClick={() => onAddToCart({ nameProduct, imageUrl, price })}>Добавить в корзину</button>
     </div>
   );
 }

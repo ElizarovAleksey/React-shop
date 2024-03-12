@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import ModalBox from './components/ModalBox';
 import Login from './components/Login';
 import Registration from './components/Registration';
+import Upload from './components/Upload';
+
 
 function App() {
 
@@ -15,7 +17,8 @@ function App() {
 
   const pages = {
     Main: <Main />,
-    Basket: <Basket/>
+    Basket: <Basket/>,
+    Upload: <Upload />
   }
   const modalBoxes = {
     none: null,
