@@ -19,3 +19,4 @@
     For convenience, when adding an item, the item counter is indicated on the cart for how many items have been added.
     The user has his own profile where you can change the password and email.
     It was created as educational tasks.
+![main](man/main.png)
