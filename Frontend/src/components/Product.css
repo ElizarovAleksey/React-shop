@@ -1,3 +1,6 @@
+@import url(../colors.css);
+@import url(../button.css);
+
 .Product {
     width: 250px;
     height: 400px;
@@ -16,21 +19,29 @@
 .Product h1 {
     width: 200px;
     height: 50px;
+    color: var(--primary-color);
 }
 .Product p {
     width: 200px;
     height: 50px;
     line-height: 50px;
+    color: var(--primary-color);
 }
 .Product button {
     width: 200px;
     height: 50px;
-    background-color: beige;
+    background-color: var(--button-color);
+    color: var(--primary-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .Product button:hover {
-    background-color: blanchedalmond;
+    background-color: var( --button-color-hover);
+}
+
+.Product.night-mode {
+    background-color: var(--night-mode-background-color); /* Используем переменную для фона в ночном режиме */
+    color: var(--night-mode-text-color); /* Используем переменную для текстового цвета в ночном режиме */
 }

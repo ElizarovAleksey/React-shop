@@ -1,0 +1,13 @@
+/* Основной CSS файл */
+/* Стили для кнопок */
+button {  
+    background-color:beige;
+    color: #2e2d2d;
+    box-shadow: 0px 0px 1px 1px rgb(117, 116, 115);
+    cursor: pointer;
+}
+
+/* Стили для кнопок при наведении */
+button:hover {
+    background-color: beige; 
+}

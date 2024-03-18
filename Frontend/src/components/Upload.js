@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Upload.css';
 
 function Upload() {
     const [nameProduct, setNameProduct] = useState('');
@@ -41,7 +42,7 @@ function Upload() {
     };
     
     return (
-        <div>
+        <div className="Upload">
             <h2>Добавить товар</h2>
             <form onSubmit={handleSubmit}>
                 <div>

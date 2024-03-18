@@ -1,0 +1,17 @@
+/* Основной CSS файл */
+
+/* Основные цвета */
+:root {
+    --primary-background-color: #c5e7e7;  /* Основной фон */
+    --primary-color: #111111;             /* Цвет текста */
+    --button-color: #e4e4ae;              /* Цвет кнопок */
+    --button-color-hover:beige;               /* Ховер кнопки */
+  }
+  
+  /* Ночной режим */
+  .night-mode {
+    --primary-background-color: #3f3f3f;  /* Темный фон */
+    --primary-color:#eeeeee;              /* Цвет текста */
+    --button-color: #808080;              /* Цвет кнопок */
+    --button-color-hover: #666665;              /* Цвет кнопок в ночном режиме */
+  }

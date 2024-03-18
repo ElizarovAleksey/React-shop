@@ -19,6 +19,6 @@
 }
 
 .Header li:hover {
-    /* background-color: rgb(166, 231, 231); */
-    background-color: beige;
+     
+    background-color: var(--button-color-hover);
 } 

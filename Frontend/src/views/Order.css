@@ -1,4 +1,7 @@
-.ModalBox {
+@import url(../colors.css);
+@import url(../button.css);
+
+.Order {
     width: 500px;
     height: auto;
     min-height: 150px;
@@ -14,7 +17,7 @@
     align-items: center;
 }
 
-.ModalBox h1 {
+.Order h1 {
     width: 100%;
     height: 50px; 
     line-height: 50px;
@@ -22,12 +25,12 @@
     font-weight: 600;  
 }
 
-.ModalBox input {
+.Order input {
     width: 100%;
     height: 30px; 
     margin-bottom: 5px;
 }
-.ModalBox button {
+.Order button {
     width: 90px;
     height: 30px; 
     margin-bottom: 5px;
@@ -35,17 +38,4 @@
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px rgb(117, 116, 115);
     cursor: pointer;
-}
-
-.ModalBox button:hover {
-    background-color: blanchedalmond;
-}
-.echo {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: hsla(236, 13%, 44%, 0.5);
-    opacity: .3;
 }

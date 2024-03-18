@@ -1,9 +1,16 @@
+@import url(../colors.css);
+@import url(../button.css);
 .Main {
     width: 100%;
     min-height: calc(100vh - 50px - 50px);
-    background-color: rgb(197, 231, 231);
+    background-color: var(--primary-background-color);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     padding: 30px;
+}
+
+.Main.night-mode {
+    background-color: var(--night-mode-background-color); /* Используем переменную для фона в ночном режиме */
+    color: var(--night-mode-text-color); /* Используем переменную для текстового цвета в ночном режиме */
 }

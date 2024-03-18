@@ -13,6 +13,14 @@ const User = new Schema({
         type: String,
         uniqued: true,
         required: true
+    },
+    registrationDate: { 
+        type: Date, 
+        default: Date.now 
+    },
+    role: {
+        type: String,
+        required: true
     }
 })
 

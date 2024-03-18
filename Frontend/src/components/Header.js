@@ -1,19 +1,53 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Header.css';
-import UserBox from './UserBox';
-import Upload from './Upload';
+import { CartContext } from './CartContext';
+import { useRole } from './RoleContext';
 
+function Header({ setPage, setModalBox, isLoggedIn, user, openProfileModal, offHandleLogout }) {
+  const { cartItemCount } = useContext(CartContext);
+ const [count, setCount] = useState(cartItemCount);
+  const { userRole, logout } = useRole();
 
-function Header({setPage, setModalBox}) {
+  useEffect(() => {
+    setCount(cartItemCount);
+      if (!isLoggedIn) {
+      logout();
+    } 
+  }, [cartItemCount, isLoggedIn, logout]);
+
+  const handleProfileClick = () => {
+    openProfileModal();
+  };
+
+  const handleLogout = () => {
+    offHandleLogout();
+  };
+
   return (
     <div className="Header">
-        <ul>
-            <li onClick={() => setPage('Main') }>Главная</li>
-            <li onClick={() => setPage('Basket') }>Корзина</li>
-            <li onClick={() => setPage('Upload') }>Загрузка</li>
-        </ul> 
-        <UserBox setModalBox={setModalBox} />
-
+      <ul>
+        <li onClick={() => setPage('Main')}>Главная</li>
+        {userRole === 'admin' && (
+          <>
+            <li onClick={() => setPage('Basket')}>Корзина ({cartItemCount})</li>
+            <li onClick={() => setPage('Upload')}>Загрузка</li>
+          </>
+        )}
+        {userRole === 'user' && (
+          <li onClick={() => setPage('Basket')}>Корзина ({cartItemCount})</li>
+        )}
+        {isLoggedIn ? (
+          <>
+            <li onClick={openProfileModal}>Профиль</li>
+            <li onClick={offHandleLogout}>Выход</li> {/* Показываем кнопку "Выход" для авторизованных пользователей */}
+          </>
+        ) : (
+          <>
+            <li onClick={() => setModalBox('Login')}>Вход</li>
+            <li onClick={() => setModalBox('Registration')}>Регистрация</li>
+          </>
+        )}
+      </ul>
     </div>
   );
 }

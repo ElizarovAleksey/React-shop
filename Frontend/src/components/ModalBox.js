@@ -14,5 +14,4 @@ function ModalBox({setModalBox, children}) {
 
   );
 }
-
 export default ModalBox;
