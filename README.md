@@ -1,4 +1,4 @@
-# The React demo application for selling products
+# Демонстрационное приложение React для продажи товаров / The React demo application for selling products
  ##  Работает на базе node.js + mongodb
       настроена аутентификация с  ролям.
       две роли: admin и user.
