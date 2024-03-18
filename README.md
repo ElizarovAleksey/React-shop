@@ -27,4 +27,5 @@
 ![main](Man/authorization.png)
 ![main](Man/profile.png)
 ![main](Man/basket.png)
+![main](Man/order.png)
 ![main](Man/upload.png)
