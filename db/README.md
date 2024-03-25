@@ -5,5 +5,5 @@
 
 # Exported mongodb database from mongodb-express
 
-contains 2 users: admin with the administrator role and password:123
-user with the user role and password:123
+    contains 2 users: admin with the administrator role and password:123
+                      user with the user role and password:123
