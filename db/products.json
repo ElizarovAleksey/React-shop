@@ -1,0 +1,8 @@
+{"_id":{"$oid":"65fc714212d47b39d29da42d"},"nameProduct":"Товар 1","price":12,"imageUrl":"/uploads/tovar.jpg","__v":0}
+{"_id":{"$oid":"65fc72a712d47b39d29da434"},"nameProduct":"Товар 2","price":1231,"imageUrl":"/uploads/tovar.jpg","__v":0}
+{"_id":{"$oid":"65fc72d912d47b39d29da437"},"nameProduct":"Товар 3","price":432,"imageUrl":"/uploads/tovar.jpg","__v":0}
+{"_id":{"$oid":"65fc74f812d47b39d29da43c"},"nameProduct":"Товар 4","price":312,"imageUrl":"/uploads/tovar.jpg","__v":0}
+{"_id":{"$oid":"65fc750812d47b39d29da43e"},"nameProduct":"Товар 5","price":64,"imageUrl":"/uploads/tovar.jpg","__v":0}
+{"_id":{"$oid":"65fc751c12d47b39d29da441"},"nameProduct":"Товар 6","price":87,"imageUrl":"/uploads/tovar.jpg","__v":0}
+{"_id":{"$oid":"65fc753312d47b39d29da443"},"nameProduct":"Товар 8","price":982,"imageUrl":"/uploads/tovar.jpg","__v":0}
+{"_id":{"$oid":"65fc755b12d47b39d29da446"},"nameProduct":"Товар 9","price":322,"imageUrl":"/uploads/tovar.jpg","__v":0}

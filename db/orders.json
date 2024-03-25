@@ -1,0 +1,1 @@
+{"_id":{"$oid":"65fc727812d47b39d29da430"},"buyerName":"alex","email":"asad@as.as","address":"asda","phone":"1231","items":[{"nameProduct":"Товар 1","imageUrl":"http://react_backend_1:9001/api/uploads/tovar.jpg","price":12,"_id":{"$oid":"65fc727812d47b39d29da431"}}],"totalPrice":12,"__v":0}

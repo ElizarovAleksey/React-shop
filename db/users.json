@@ -1,0 +1,2 @@
+{"_id":{"$oid":"65fc711a12d47b39d29da429"},"login":"admin","password":"123","email":"asd@as.sd","role":"admin","registrationDate":{"$date":"2024-03-21T17:40:42.821Z"},"__v":0}
+{"_id":{"$oid":"6600832dd2ab08902faab79c"},"login":"Alex","password":"123","email":"alex@sd.sd","role":"user","registrationDate":{"$date":"2024-03-24T19:46:53.670Z"},"__v":0}
