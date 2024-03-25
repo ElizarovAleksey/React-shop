@@ -1,8 +1,8 @@
 //endpoint.js
 //const backendBaseUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:9001';
-const backendBaseUrl = `${process.env.REACT_APP_BACKEND_URL}`;
-const apiUrl = `${backendBaseUrl}/api`;
-//const apiUrl = '/api';
+//const backendBaseUrl = `${process.env.REACT_APP_BACKEND_URL}`;
+//const apiUrl = `${backendBaseUrl}/api`;
+const apiUrl = '/api';
 console.log(process.env.REACT_APP_BACKEND_URL)
 
 export const loginUrl = `${apiUrl}/login`;
