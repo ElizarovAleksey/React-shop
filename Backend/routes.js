@@ -7,10 +7,10 @@ const registrationController = require('./registrationController');
 const userController = require('./userController');
 
 
-router.post('/login', authController.login);
-router.post('/registration', registrationController.register);
-router.post('/change-password/:id', userController.changePassword);
-router.post('/change-email/:id', userController.changeEmail);
+router.post('/api/login', authController.login);
+router.post('/api/registration', registrationController.register);
+router.post('/api/change-password/:id', userController.changePassword);
+router.post('/api/change-email/:id', userController.changeEmail);
 
 
 module.exports = router;

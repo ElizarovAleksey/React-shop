@@ -1,5 +1,5 @@
 @import url(../colors.css);
-@import url(../button.css);
+@import url(../mobile.css);
 
 .Product {
     width: 250px;
@@ -8,7 +8,11 @@
     margin: 5px;
     padding: 25px;
     border-radius: 5px;
+}
 
+.Product:hover {
+    transform: translateY(-5px); 
+    transition: transform 0.3s ease; 
 }
 
 .Product img {
@@ -41,7 +45,111 @@
     background-color: var( --button-color-hover);
 }
 
-.Product.night-mode {
-    background-color: var(--night-mode-background-color); /* Используем переменную для фона в ночном режиме */
-    color: var(--night-mode-text-color); /* Используем переменную для текстового цвета в ночном режиме */
+.night-mode .Product button {
+    color: var(--night-mode-text-color-button);
 }
+
+/* Стили для планшетов */
+@media only screen and (min-width: 820px) and (max-width: 1024px) {
+
+    .Main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+        padding: 15px;
+    }
+    
+    .Product {
+        width: 240px;
+        height: 285px;
+        box-shadow: 0px 0px 3px 3px rgb(117, 116, 115);
+        margin: 5px;
+        padding: 25px;
+        border-radius: 5px;
+    }
+
+   .Product:hover {
+        transform: translateY(-5px); 
+        transition: transform 0.3s ease; 
+    }
+
+   .Product img {
+        width: 100px;
+        height: auto;
+        border-radius: 5px;
+    }
+
+   .Product button {
+        width: 200px;
+        height: 50px;
+        background-color: var(--button-color);
+        color: var(--primary-color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .Product button:hover {
+        background-color: var( --button-color-hover);
+    }
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+ 
+    .Product {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 15px; 
+        padding: 15px;
+      }
+
+    .Product {
+        padding: 15px;
+        list-style-type: none;
+        width: 150px;
+        height: 230px;
+        box-shadow: 0px 0px 3px 3px rgb(117, 116, 115);
+        margin: 5px;
+        padding: 25px;
+        border-radius: 5px;
+      }
+
+    .Product:hover {
+        transform: translateY(-5px); 
+        transition: transform 0.3s ease; 
+    }
+
+    .Product h1 {
+        width: 100px;
+        height: 10px;
+        font-size: 20px;
+        color: var(--primary-color);
+      }
+
+    .Product p {
+        width: 100px;
+        height: 50px;
+        color: var(--primary-color);
+      }
+
+    .Product img{
+        width: 100px;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .Product button {
+        width: 101px;
+        height: 36px;
+        background-color: var(--button-color);
+        color: var(--primary-color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .Product button:hover {
+        background-color: var( --button-color-hover);
+    }
+    
+  }

@@ -1,7 +1,8 @@
+import { changePasswordUrl } from './endpoints';
 export const handleChangePassword = async (login, newPassword) => {
     console.log("Смена пароля:", login);
     try {
-        const response = await fetch(`http://localhost:9001/change-password/${login}`, {
+        const response = await fetch(`${changePasswordUrl}/${login}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -1,0 +1,86 @@
+/* Основной CSS файл */
+/* mobile.css */
+ /* Стили для десктопов */  
+ @media only screen and (min-width: 1025px) {
+  .app {
+    width: 1200px;
+  }
+  .Main {
+      grid-template-columns: repeat(2, 1fr); 
+      grid-gap: 15px; 
+      padding: 15px; 
+    }
+}
+  
+/* Стили для планшетов */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .app {
+      width: 80%;
+    }
+    .Main {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 15px; 
+        padding: 15px; 
+      }
+    .Basket {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+        padding: 15px;
+    }
+    .Basket li {
+        padding: 15px;
+        list-style-type: none;
+        width: 150px;
+        height: 205px;
+        box-shadow: 0px 0px 3px 3px rgb(117, 116, 115);
+        margin: 5px;
+        padding: 25px;
+        border-radius: 5px;
+    }
+    .Basket img {
+        width: 100px;
+        height: auto;
+        border-radius: 5px;
+    }
+  }
+  
+/* Стили для мобильных устройств */
+  @media only screen and (max-width: 600px) {
+    .app {
+      padding: 10px;
+    }
+    .Main {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 15px; 
+        padding: 15px;
+      }
+      
+    .Basket ul {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-gap: 15px;
+        padding: 15px;
+    }
+    .Basket li {
+        padding: 15px;
+        list-style-type: none;
+        width: 150px;
+        height: 205px;
+        box-shadow: 0px 0px 3px 3px rgb(117, 116, 115);
+        margin: 5px;
+        padding: 25px;
+        border-radius: 5px;
+    }
+    .Basket img {
+        width: 100px;
+        height: auto;
+        border-radius: 5px;
+    } 
+
+    .Basket p {
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        color: var(--primary-color);
+    }
+  }
+  

@@ -1,9 +1,9 @@
 // App.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css'; // Главный CSS файл
 import './colors.css'; // Импорт основных цветов
-import './button.css'; // Импорт стилей для кнопок
+import './mobile.css'; // Импорт стилей для мобильнх
 import Header from './components/Header';
 import Main from './views/Main';
 import Basket from './views/Basket';
@@ -17,6 +17,7 @@ import { handleChangePassword } from './components/changePassword';
 import { handleChangeEmail } from './components/changeEmail';
 import { CartProvider } from './components/CartContext';
 import { RoleProvider } from './components/RoleContext';
+
 
 function App() {
   const [page, setPage] = useState('Main');
@@ -74,7 +75,9 @@ function App() {
       <RoleProvider>
         <Router>
           <div className={nightMode ? 'night-mode' : 'App'}>
-          <button className="button" onClick={toggleNightMode}>Переключить ночной режим</button>
+          <button className="button" onClick={toggleNightMode}>
+            {nightMode ? 'Переключить дневной режим' : 'Переключить ночной режим'}
+          </button>
             <Header
               setPage={setPage}
               setModalBox={setModalBox}

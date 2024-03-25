@@ -1,5 +1,6 @@
-// Login.js
+//login.js
 import React, { useState } from 'react';
+import { loginUrl } from './endpoints';
 import './Login.css';
 
 import { useRoleSetter } from './RoleContext'; // Импортируем хук для установки роли пользователя
@@ -17,9 +18,9 @@ function Login({ onLogin }) {
             password: password
         };
 
-        console.log(data);
+        //console.log(data); // Вывод данных
 
-        const api = 'http://localhost:9001/login';
+        const api = `${loginUrl}/`;
         fetch(api, {
             method: 'POST',
             headers: {

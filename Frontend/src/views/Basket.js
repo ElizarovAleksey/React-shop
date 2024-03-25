@@ -30,15 +30,15 @@ function Basket() {
                 <div>
                   {item.nameProduct}: {item.price} руб
                 </div>
-                <button onClick={() => removeFromCart(index)}>Удалить</button>
+                <button onClick={() => removeFromCart(index) }  className="DelOrder">Удалить</button>
               </li>
             ))}
           </ul>
           <p className="BasketOrder-text">Общая стоимость: {calculateTotal()} руб</p>
           {isOrderButtonVisible ? (
-            <button onClick={toggleOrderVisibility} className="BasketOrder-text">Оформить заказ</button>
+            <button onClick={toggleOrderVisibility} className="BasketOrder">Оформить заказ</button>
           ) : (
-            <button onClick={toggleOrderVisibility} className="BasketOrder-text">Отменить заказ</button>
+            <button onClick={toggleOrderVisibility} className="BasketOrder">Отменить заказ</button>
           )}
           {isOrderVisible && <Order totalPrice={calculateTotal()} />}
         </>

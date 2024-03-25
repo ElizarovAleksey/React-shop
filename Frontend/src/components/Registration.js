@@ -1,6 +1,7 @@
 //Registration.js
 import React, { useState, useEffect } from 'react';
 import './Registration.css';
+import { reginUrl } from './endpoints';
 
 function Registration() {
   const [success, setSuccess] = useState(false);
@@ -28,7 +29,7 @@ function Registration() {
       role: 'user'
     };
 
-    const api = 'http://localhost:9001/registration';
+    const api = `${reginUrl}/`;
     fetch(api, {
       method: 'POST',
       headers: {

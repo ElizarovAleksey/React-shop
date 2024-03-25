@@ -1,17 +1,18 @@
 /* Основной CSS файл */
-
 /* Основные цвета */
 :root {
-    --primary-background-color: #c5e7e7;  /* Основной фон */
-    --primary-color: #111111;             /* Цвет текста */
-    --button-color: #e4e4ae;              /* Цвет кнопок */
-    --button-color-hover:beige;               /* Ховер кнопки */
+    --primary-background-color:   #F0FDF4;  /* Основной фон */
+    --primary-color: #111111;               /* Цвет текста */
+    --button-color: #9F7AEA;                /* Цвет кнопок */
+    --button-color-hover:#C4B5FD;           /* Ховер кнопки */
   }
   
   /* Ночной режим */
   .night-mode {
-    --primary-background-color: #3f3f3f;  /* Темный фон */
-    --primary-color:#eeeeee;              /* Цвет текста */
-    --button-color: #808080;              /* Цвет кнопок */
-    --button-color-hover: #666665;              /* Цвет кнопок в ночном режиме */
+    --primary-background-color: #4A5568;    /* Темный фон */
+    --primary-color:#eeeeee;                /* Цвет текста */
+    --button-color: #A3E635;                /* Цвет кнопок */
+    --button-color-hover: #6EE7B7;          /* Ховер кнопки */
+    text-align: center;                       
+    --night-mode-text-color-button: #111111; /* цвет кнопки товаров */
   }

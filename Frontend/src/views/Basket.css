@@ -1,5 +1,5 @@
 @import url(../colors.css);
-@import url(../button.css);
+@import url(../mobile.css);
  
  .Basket {
     width: 100%;
@@ -17,13 +17,17 @@
 
 .Basket li {
     list-style-type: none;
-    width: 250px;
-    height: 300px;
+    width:250px;
+    height: 350px;
     box-shadow: 0px 0px 3px 3px rgb(117, 116, 115);
     margin: 5px;
     padding: 25px;
     border-radius: 5px;
+}
 
+.Basket li:hover {
+    transform: translateY(-5px); 
+    transition: transform 0.3s ease; 
 }
 
 .Basket img {
@@ -42,8 +46,30 @@
     line-height: 50px;
     color: var(--primary-color);
 }
-.Basket button {
-    width: 120px;
+.BasketOrder  {
+    width: 200px;
+    height: 50px;
+    background-color: var(--button-color);
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.BasketOrder button:hover {
+    background-color: var(--button-color-hover);
+}
+
+.BasketOrder p {
+    width: 500px;
+    height: auto;
+    line-height: 50px;
+    color: var(--primary-color);
+
+}
+
+.DelOrder {
+    width: 100px;
     height: 30px;
     background-color: var(--button-color);
     margin: 5px;
@@ -52,19 +78,90 @@
     cursor: pointer;
 }
 
-.Basket button:hover {
-    background-color: var( --button-color-hover);
-}
+/* Стили для планшетов */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .app {
+        width: 80%;
+    }
+    .Basket {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+        padding: 15px;
+    }
+    .Basket li {
+        padding: 15px;
+        list-style-type: none;
+        width: 150px;
+        height: 205px;
+        box-shadow: 0px 0px 3px 3px rgb(117, 116, 115);
+        margin: 5px;
+        padding: 25px;
+        border-radius: 5px;
+    }
 
-.Basket.BasketOrder-text p {
-    width: 500px;
-    height: auto;
-    line-height: 50px;
-    color: var(--primary-color);
+    .Basket li:hover {
+        transform: translateY(-5px); 
+        transition: transform 0.3s ease; 
+    }
 
-}
+    .Basket img {
+        width: 100px;
+        height: auto;
+        border-radius: 5px;
+    }
 
-.Product.night-mode {
-    background-color: var(--night-mode-background-color); /* Используем переменную для фона в ночном режиме */
-    color: var(--night-mode-text-color); /* Используем переменную для текстового цвета в ночном режиме */
+    .DelOrder {
+        width: 100px;
+        height: 25px;
+        background-color: var(--button-color);
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
+ /* Стили для мобильных устройств */
+ @media only screen and (max-width: 600px) {
+    .Basket ul {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-gap: 15px;
+        padding: 15px;
+    }
+    .Basket li {
+        padding: 15px;
+        list-style-type: none;
+        width: 150px;
+        height: 205px;
+        box-shadow: 0px 0px 3px 3px rgb(117, 116, 115);
+        margin: 5px;
+        padding: 25px;
+        border-radius: 5px;
+    }
+
+    .Basket li:hover {
+        transform: translateY(-5px); 
+        transition: transform 0.3s ease; 
+    }
+    
+    .Basket img {
+        width: 100px;
+        height: auto;
+        border-radius: 5px;
+    } 
+
+    .Basket.p {
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        color: var(--primary-color);
+    }
+    .DelOrder {
+        width: 100px;
+        height: 25px;
+        background-color: var(--button-color);
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+} 

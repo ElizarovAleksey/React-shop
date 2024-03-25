@@ -3,6 +3,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import './Main.css';
 import Product from '../components/Product';
 import { CartContext } from '../components/CartContext';
+import { productUrl } from '../components/endpoints';
 
 function Main() {
   const [products, setProducts] = useState([]);
@@ -11,7 +12,7 @@ function Main() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:9001/products');
+        const response = await fetch(`${productUrl}/products`);
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }
@@ -27,7 +28,7 @@ function Main() {
   }, []);
 
   const getImageUrl = (imageUrl) => {
-    return imageUrl ? `http://localhost:9001${imageUrl}` : null;
+    return imageUrl ? `${productUrl}${imageUrl}` : null;
   };
 
   return (

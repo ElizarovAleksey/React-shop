@@ -1,7 +1,8 @@
+import { changeEmailUrl } from './endpoints';
 export const handleChangeEmail = async (login, newEmail) => {
     console.log("Смена почты:", login);
     try {
-      const response = await fetch(`http://localhost:9001/change-email/${login}`, {
+      const response = await fetch(`${changeEmailUrl}/${login}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,9 +1,9 @@
-
+import { ordersUrl } from './endpoints';
 export async function placeOrder(orderData) {
     console.log('Отправление данных  на сервер ', orderData);
   try {
 
-    const response = await fetch('http://localhost:9001/api/orders', {
+    const response = await fetch(`${ordersUrl}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

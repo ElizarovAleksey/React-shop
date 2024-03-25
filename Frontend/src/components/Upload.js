@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Upload.css';
-
+import { productUrl } from './endpoints';
 function Upload() {
     const [nameProduct, setNameProduct] = useState('');
     const [price, setPrice] = useState('');
@@ -25,7 +25,7 @@ function Upload() {
         formData.append('image', image);
     
         try {
-            const response = await fetch('http://localhost:9001/products', {
+            const response = await fetch(`${productUrl}/products`, {
                 method: 'POST',
                 body: formData
             });
