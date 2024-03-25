@@ -22,6 +22,49 @@
     The user has his own profile where you can change the password and email.
     It has two modes day and night.
     It was created as educational tasks.
+## Добавлен в репозитарий Docker Hub
+~~~bash
+ version: '3.8'
+          services:
+            # React приложение
+            react-app:
+              image: alex89102/react-app:latest
+              container_name: react-app #Название оставить как есть для корректной работы frontend+backend
+              env_file:
+                - .env
+             restart: always
+             ports:
+               - "8082:80"    # Порт, на котором будет доступен frontend
+               - "9001:9001"  # Порт, на котором будет доступен backend
+
+            # MongoDB
+            mongo:
+              image: mongo
+              container_name: mongo
+              restart: always
+              environment:
+                MONGO_INITDB_ROOT_USERNAME: root
+                MONGO_INITDB_ROOT_PASSWORD: example
+              ports:
+                - "27017:27017"
+               volumes:
+                - /opt/db:/data/db  # хранение базы данных на хосте
+
+            # Mongo Express (админ-панель для MongoDB)
+            mongo-express:
+              image: mongo-express
+              container_name: mongo-express
+              restart: always
+              ports:
+               - "8081:8081"
+              environment:
+               ME_CONFIG_MONGODB_SERVER: mongo                # Используйте этот адрес для подключения к MongoDB на хосте
+               ME_CONFIG_MONGODB_PORT: "27017"                # Порт MongoDB на хосте
+               ME_CONFIG_MONGODB_ADMINUSERNAME: root          #  Admin от MongoDB  
+               ME_CONFIG_MONGODB_ADMINPASSWORD: example       # пароль от MongoDB
+               ME_CONFIG_BASICAUTH_USERNAME: admin            # Имя пользователя для аутентификации в Mongo Express (по желанию)
+               ME_CONFIG_BASICAUTH_PASSWORD: admin_password   # Пароль пользователя для аутентификации в Mongo Express (по желанию)
+~~~
 ![main](Man/main.png)
 ![main](Man/main-night-mode.png)
 ![main](Man/registr.png)
