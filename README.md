@@ -22,7 +22,7 @@
     The user has his own profile where you can change the password and email.
     It has two modes day and night.
     It was created as educational tasks.
-## Добавлен в репозитарий Docker Hub
+## Добавлен в репозитарий <a href="https://hub.docker.com/repository/docker/alex89102/react-app/"> Docker Hub</a>
 ~~~bash
  version: '3.8'
           services:
