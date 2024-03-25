@@ -65,6 +65,12 @@
                ME_CONFIG_BASICAUTH_USERNAME: admin            # Имя пользователя для аутентификации в Mongo Express (по желанию)
                ME_CONFIG_BASICAUTH_PASSWORD: admin_password   # Пароль пользователя для аутентификации в Mongo Express (по желанию)
 ~~~
+## файл .env
+   создайте файл .env с переменной для подключения backend к базе данных mangodb
+~~~bahs
+   MONGODB_SERVER_URL = mongodb://root:example@mongo:27017
+~~~
+
 ![main](Man/main.png)
 ![main](Man/main-night-mode.png)
 ![main](Man/registr.png)
